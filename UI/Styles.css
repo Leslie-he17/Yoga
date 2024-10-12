@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover; 
+    opacity: 0.7; 
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.85);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)
+}
+
+header h1 {
+    font-family: 'Georgia', serif; 
+    font-size: 48px;
+    letter-spacing: 2px;
+    color: white; 
+}
+
+
+/* First */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid black;
+    transition: background-color 0.3s ease; 
+}
+
+
+/* Search */
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar input, .search-bar select {
+    padding: 10px;
+    font-size: 16px;
+    width: 30%;
+    margin-right: 10px;
+    border: 1px solid rgba(76, 175, 80, 0.85);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: rgba(76, 175, 80, 0.85);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.search-bar button:hover {
+    background-color: rgba(76, 175, 80, 0.85);
+}
+
+
+/* Teacher */
+.teacher-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; 
+}
+
+.teacher-card {
+    width: 27%; 
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+.teacher-card:hover {
+    transform: scale(1.05);
+}
+
+.teacher-card h3 {
+    margin-top: 0;
+    color: #000000;
+}
+
+.teacher-card p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.teacher-card button {
+    background-color: rgba(76, 175, 80, 0.85);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.teacher-card button:hover {
+    background-color: rgba(76, 175, 80, 0.85);
+}
+
+.booking-form {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid rgba(76, 175, 80, 0.85);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.booking-form input, .booking-form select {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.booking-form button {
+    width: 98%;
+    padding: 10px;
+    background-color: rgba(76, 175, 80, 0.85);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.confirmation {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(157, 226, 148, 0.9);
+    border: 1px solid rgba(76, 175, 80, 0.85);
+    color: #000000;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* Payment */
+.payment-form {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid rgba(76, 175, 80, 0.85);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.payment-form input {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.payment-form button {
+    width: 98%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.payment-form button:hover {
+    background-color: #45a049;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* Teacher List styling */
+.teacher-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Teacher Cards styling */
+.teacher-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+    width: 48%;
+    box-sizing: border-box; 
+}
+
+.teacher-card:hover {
+    transform: scale(1.05);
+}
+
+/* teacher information style */
+.teacher-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%; 
+    word-wrap: break-word;
+}
+
+.teacher-info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #000000;
+    font-size: 1.5em;
+}
+
+.teacher-info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 1em;
+}
+
+/* teacher photo */
+.teacher-photo {
+    width: 25%; 
+    height: auto;
+    border-radius: 10px;
+    margin-left: 10px;
+}

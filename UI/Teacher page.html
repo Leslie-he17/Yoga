@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne Yoga Center</title>
+    <link rel="stylesheet" href="Teacher.css">
+</head>
+<body>
+
+<header>
+    <h1>Teacher A (Yoga Teacher) - Melbourne Yoga Center</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">View Courses</a></li>
+            <li><a href="#">Update Availability</a></li>
+            <li><a href="#">Manage Students</a></li>
+            <li><a href="#">Income & Payments</a></li>
+            <li><a href="#">Feedback & Ratings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Course Schedule Section -->
+    <section class="course-schedule">
+        <h2>Course Schedule</h2>
+        <div class="calendar">
+            <p>Weekly Calendar View</p>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00 - 10:00 AM</td>
+                        <td class="available">Available</td>
+                        <td class="booked">Booked</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00 AM</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="booked">Booked</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="booked">Booked</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00 PM</td>
+                        <td class="available">Available</td>
+                        <td class="booked">Booked</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="booked">Booked</td>
+                        <td class="available">Available</td>
+                    </tr>
+                    <tr>
+                        <td>14:00 - 16:00 PM</td>
+                        <td class="booked">Booked</td>
+                        <td class="available">Available</td>
+                        <td class="booked">Booked</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                        <td class="available">Available</td>
+                    </tr>
+                </tbody>                
+            </table>
+    
+            <!-- Color -->
+            <div class="legend">
+                <span class="legend-item"><span class="green-box"></span> Available</span>
+                <span class="legend-item"><span class="red-box"></span> Booked</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Update Availability Section -->
+    <section class="update-availability">
+        <h2>Update Availability</h2>
+        <p>Select time slots to update availability:</p>
+        <div class="availability-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <label for="time-slot">Time Slot:</label>
+            <select id="time-slot" name="time-slot">
+                <option value="9am-10am">9am - 10am</option>
+                <option value="10am-11am">10am - 11am</option>
+                <option value="11am-12pm">11am - 12pm</option>
+            </select>
+            <button class="btn">Submit Changes</button>
+        </div>
+    </section>
+
+    <!-- Student Management Section -->
+    <section class="student-management">
+        <h2>Manage Students</h2>
+        <div class="student-list">
+            <table>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Contact</th>
+                    <th>Next Lesson</th>
+                </tr>
+                <tr>
+                    <td>Student A</td>
+                    <td>Yoga for Beginners</td>
+                    <td>StudentA@email.com</td>
+                    <td>October 9, 10:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Student B</td>
+                    <td>Yoga for Anxiety</td>
+                    <td>StudentB@email.com</td>
+                    <td>October 10, 11:00 AM</td>
+                </tr>
+            </table>
+            <button class="btn">Send Notification</button>
+        </div>
+    </section>
+
+    <!-- Income and Payment Records Section -->
+    <section class="income-payment">
+        <h2>Income & Payments</h2>
+        <div class="payment-record">
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Course</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Feb 28</td>
+                    <td>Yoga for Strength</td>
+                    <td>$60</td>
+                    <td>Paid</td>
+                </tr>
+                <tr>
+                    <td>Feb 27</td>
+                    <td>Yoga for Weight Loss</td>
+                    <td>$50</td>
+                    <td>Pending</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Feedback and Ratings Section -->
+    <section class="feedback-ratings">
+        <h2>Feedback & Ratings</h2>
+        <div class="feedback-list">
+            <table>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Rating</th>
+                    <th>Feedback</th>
+                </tr>
+                <tr>
+                    <td>Student A</td>
+                    <td>Yoga for Beginners</td>
+                    <td>5/5</td>
+                    <td>Great class, very relaxing.</td>
+                </tr>
+                <tr>
+                    <td>Student B</td>
+                    <td>Yoga for Anxiety</td>
+                    <td>4/5</td>
+                    <td>Helped me manage my stress.</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Melbourne Yoga Center. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

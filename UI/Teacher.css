@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+    url('background.jpg') no-repeat center center fixed;
+    background-size: cover; 
+    color: #333;
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.85);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid black;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+/* container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* whole button */
+.btn {
+    background-color: #45a049;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/*class arrange*/
+.course-schedule, .update-availability, .student-management, .income-payment, .feedback-ratings {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.calendar, .availability-form, .student-list, .payment-record, .feedback-list {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.legend {
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.green-box, .red-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.green-box {
+    background-color: green;
+}
+
+.red-box {
+    background-color: red;
+}
+
+/* table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgba(109, 109, 109, 0.85);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(109, 109, 109, 0.85);
+    color: white;
+    margin-top: 20px;
+}
+
+/* first table time table*/
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.calendar-table th, .calendar-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    width: 12.5%
+}
+
+.calendar-table th {
+    background-color: rgba(109, 109, 109, 0.85);
+    color: white;
+}
+
+/* .calendar-table td {
+    background-color: #f9f9f9;
+} */
+
+.available {
+    background-color: rgb(213, 255, 213);
+    color: #000000;
+}
+
+.booked {
+    background-color: rgb(255, 150, 150);
+    color: #000000;
+}
+
+/* class arrange table */
+.course-schedule {
+    margin-bottom: 40px;
+}
+
+.legend {
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.green-box, .red-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.green-box {
+    background-color: rgb(213, 255, 213);
+}
+
+.red-box {
+    background-color: rgb(255, 150, 150);
+}

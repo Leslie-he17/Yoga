@@ -1,0 +1,110 @@
+/* Background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+    url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.85);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+.login-form, .register-form {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button style */
+.teacher-form-buttons {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 10px;
+}
+
+.teacher-form-buttons button {
+    flex: 1; 
+    margin: 0 5px; 
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.teacher-form-buttons button:hover {
+    background-color: #45a049;
+}

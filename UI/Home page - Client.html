@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne Yoga Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Melbourne Yoga Center</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Log out</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Search and Filter Section -->
+    <div class="search-bar">
+        <input type="text" id="location" placeholder="Enter your location (e.g., Postcode)">
+        <select id="technique">
+            <option value="">Select Yoga Technique</option>
+            <option value="anxiety">Yoga for Anxiety</option>
+            <option value="weightloss">Yoga for Weight Loss</option>
+            <option value="beginners">Yoga for Beginners</option>
+        </select>
+        <select id="distance">
+            <option value="">Distance (km)</option>
+            <option value="5">0-5 km</option>
+            <option value="10">0-10 km</option>
+            <option value="15">0-15 km</option>
+        </select>
+        <button onclick="searchTeachers()">Find Teacher</button>
+    </div>
+
+    <!-- Teacher List -->
+    <div class="teacher-list" id="teacherList">
+        <!-- Teacher Cards -->
+        <div class="teacher-card">
+            <div class="teacher-info">
+                <h3>Teacher A</h3>
+                <p>Technique: Yoga for Beginners</p>
+                <p>Distance: 5 km</p>
+                <p>Rate: $50/hr</p>
+                <button onclick="bookLesson('Teacher A')">Book Now</button>
+            </div>
+            <img src="a.png" alt="Chase Wei" class="teacher-photo">
+        </div>
+
+        <div class="teacher-card">
+            <div class="teacher-info">
+                <h3>Teacher B</h3>
+                <p>Technique: Yoga for Anxiety</p>
+                <p>Distance: 10 km</p>
+                <p>Rate: $60/hr</p>
+                <button onclick="bookLesson('Teacher B')">Book Now</button>
+            </div>
+            <img src="b.png" alt="Teacher B" class="teacher-photo">
+        </div>
+    
+        <div class="teacher-card">
+            <div class="teacher-info">
+                <h3>Teacher C</h3>
+                <p>Technique: Yoga for Weight Loss</p>
+                <p>Distance: 15 km</p>
+                <p>Rate: $55/hr</p>
+                <button onclick="bookLesson('Teacher C')">Book Now</button>
+            </div>
+            <img src="c.png" alt="Teacher C" class="teacher-photo">
+        </div>
+
+        <div class="teacher-card">
+            <div class="teacher-info">
+                <h3>Teacher D</h3>
+                <p>Technique: Yoga for Flexibility</p>
+                <p>Distance: 20 km</p>
+                <p>Rate: $60/hr</p>
+                <button onclick="bookLesson('Teacher C')">Book Now</button>
+            </div>
+            <img src="d.png" alt="Teacher C" class="teacher-photo">
+        </div>
+
+        <div class="teacher-card">
+            <div class="teacher-info">
+                <h3>Teacher E</h3>
+                <p>Technique: Yoga for Strength</p>
+                <p>Distance: 25 km</p>
+                <p>Rate: $65/hr</p>
+                <button onclick="bookLesson('Teacher C')">Book Now</button>
+            </div>
+            <img src="e.png" alt="Teacher C" class="teacher-photo">
+        </div>
+
+        <div class="teacher-card">
+            <div class="teacher-info">
+                <h3>Teacher F</h3>
+                <p>Technique: Yoga for Relaxation</p>
+                <p>Distance: 30 km</p>
+                <p>Rate: $70/hr</p>
+                <button onclick="bookLesson('Teacher C')">Book Now</button>
+            </div>
+            <img src="f.png" alt="Teacher C" class="teacher-photo">
+        </div>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="booking-form" id="bookingForm">
+        <h2>Book a Lesson</h2>
+        <label for="teacherName">Teacher</label>
+        <input type="text" id="teacherName" readonly>
+
+        <label for="lessonTime">Choose a time</label>
+        <select id="lessonTime">
+            <option value="9am">9:00 AM</option>
+            <option value="11am">11:00 AM</option>
+            <option value="2pm">2:00 PM</option>
+        </select>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+
+    <!-- Confirmation Message -->
+    <div class="confirmation" id="confirmationMessage">
+        <h3>Booking Confirmed!</h3>
+        <p>Your lesson with <span id="confirmedTeacher"></span> has been booked for <span id="confirmedTime"></span>.</p>
+        <p>The lesson confirmation letter has been sent to the teacher.</p>
+        <p><strong>Note:</strong> Your booking will only be confirmed after teachers' confirmation. After teachers confire lessons, please pay in five days. Thank you!</p>
+    </div>
+
+    <!-- Payment form -->
+    <div class="payment-form" id="paymentForm">
+        <h2>Payment Information</h2>
+        <p>Please enter your credit card information to confirm your booking.</p>
+
+        <label for="cardNumber">Credit Card Number</label>
+        <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="16">
+
+        <label for="cardExpiry">Expiry Date</label>
+        <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+
+        <label for="cardCVV">CVV</label>
+        <input type="text" id="cardCVV" placeholder="XXX" maxlength="3">
+
+        <div id="error-message" style="color: red; display: none;">
+        Error! You provide a non-compliant. Please try again.
+        </div>
+
+        <button onclick="validatePayment()">Submit Payment</button>
+    </div>
+
+<script>
+    function searchTeachers() {
+        alert('Searching for teachers...');
+    }
+
+    function bookLesson(teacherName) {
+        document.getElementById('teacherName').value = teacherName;
+        document.getElementById('bookingForm').style.display = 'block';
+    }
+
+    function confirmBooking() {
+        const teacher = document.getElementById('teacherName').value;
+        const time = document.getElementById('lessonTime').value;
+
+        document.getElementById('confirmedTeacher').textContent = teacher;
+        document.getElementById('confirmedTime').textContent = time;
+
+        document.getElementById('confirmationMessage').style.display = 'block';
+        document.getElementById('bookingForm').style.display = 'none';
+
+        // Display payment form after booking confirmation
+        document.getElementById('paymentForm').style.display = 'block';
+    }
+
+    // 验证支付表单
+    function validatePayment() {
+        var cardNumber = document.getElementById('cardNumber').value;
+        var cardExpiry = document.getElementById('cardExpiry').value;
+        var cardCVV = document.getElementById('cardCVV').value;
+        var errorMessage = document.getElementById('error-message');
+
+        // 验证信用卡号、到期日期和CVV的长度是否符合要求
+        if (cardNumber.length !== 16 || cardExpiry.length !== 5 || cardCVV.length !== 3) {
+            errorMessage.style.display = 'block'; // 显示错误信息
+        } else {
+            errorMessage.style.display = 'none'; // 隐藏错误信息
+            alert('Payment successful! Your booking is confirmed.');
+            document.getElementById('paymentForm').style.display = 'none'; // 隐藏支付表单
+        }
+    }
+</script>
+
+</body>
+</html>
